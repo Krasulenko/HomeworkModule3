@@ -15,7 +15,7 @@ public class Solution {
         CollegeStudent collegeStudent1 = new CollegeStudent("Daniel", "Craig", 5);
         CollegeStudent collegeStudent2 = new CollegeStudent("Murray", new Course[]{course1,course2, course3, course4, course5});
         CollegeStudent collegeStudent3 = new CollegeStudent("Oxford", 54, 5673);
-        
+
         SpecialStudent specialStudent1 = new SpecialStudent("David", "May", 7);
         SpecialStudent specialStudent2 = new SpecialStudent("Cambridge", 46, 6743);
         SpecialStudent specialStudent3 = new SpecialStudent(678498);
