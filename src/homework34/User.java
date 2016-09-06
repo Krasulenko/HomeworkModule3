@@ -71,7 +71,7 @@ public class User {
         double commission;
         if (summ < 1000) commission = 0.05;
         else  commission = 0.1;
-        return summ + summ * commission;
+        return balance - (summ + summ * commission);
     }
     int companyNameLength (){
         return companyName.length();

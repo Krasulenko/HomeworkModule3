@@ -9,7 +9,10 @@ public class Main {
         user.paySalary();
         System.out.println("Balance after sallary" + " " + user.getBalance());
 
-        System.out.println("Withdrawal" + " " + user.withdraw(1600));
+        System.out.println("Balance after withdrawal" + " " + user.withdraw(1600));
+
+        user.setBalance((int)user.withdraw(1600));
+        System.out.println("Balance" + " " + user.getBalance());
 
         System.out.println("Companyname length" + " " + user.companyNameLength());
 
