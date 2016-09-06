@@ -65,18 +65,18 @@ public class User {
         this.currency = currency;
     }
     void paySalary(){
-        balance = balance + salary;
+        this.balance = this.balance + salary;
     }
     double withdraw(int summ){
         double commission;
         if (summ < 1000) commission = 0.05;
         else  commission = 0.1;
-        return balance - (summ + summ * commission);
+        return this.balance - (summ + summ * commission);
     }
     int companyNameLength (){
-        return companyName.length();
+        return this.companyName.length();
     }
     int monthIncreaser(int addMonth){
-        return monthsOfEmployment + addMonth;
+        return this.monthsOfEmployment + addMonth;
     }
 }
