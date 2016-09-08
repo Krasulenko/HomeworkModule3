@@ -64,19 +64,27 @@ public class User {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
-    void paySalary(){
+
+    void paySalary() {
         this.balance = this.balance + salary;
     }
-    double withdraw(int summ){
+
+    int withdraw(int summ) {
         double commission;
+        int balanceAfterWithdrawal;
         if (summ < 1000) commission = 0.05;
-        else  commission = 0.1;
-        return this.balance - (summ + summ * commission);
+        else commission = 0.1;
+        balanceAfterWithdrawal = this.balance - (int) (summ + summ * commission);
+        if (balanceAfterWithdrawal < 0) System.out.println("Not enough money on balance");
+        else this.balance = balanceAfterWithdrawal;
+        return this.balance;
     }
-    int companyNameLength (){
+
+    int companyNameLength() {
         return this.companyName.length();
     }
-    int monthIncreaser(int addMonth){
+
+    int monthIncreaser(int addMonth) {
         return this.monthsOfEmployment + addMonth;
     }
 }
